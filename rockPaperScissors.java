@@ -16,47 +16,42 @@ public class rockPaperScissors {
             System.out.println("PLAYER 2: Enter Rock/Paper/Scissors");
             String playerTwoInput = validCheck(PLAYER_OPTIONS);
 
-            //PLAYER 1 ROCK
+            //PLAYER 1 ROCK---
             if (playerOneInput.equalsIgnoreCase("Rock")) {
+                //PLAYER 1 ROCK PLAYER 2 ROCK
+                if (playerTwoInput.equalsIgnoreCase("Rock")) {System.out.println("Tie!");
 
-                if (playerTwoInput.equalsIgnoreCase("Rock")) {
-                    //PLAYER 1 ROCK PLAYER 2 ROCK
-                    System.out.println("Tie!");
-                } else if (playerTwoInput.equalsIgnoreCase("Paper")) {
-                    //PLAYER 1 ROCK PLAYER 2 PAPER
-                    System.out.println("Player 2 wins!");
-                } else if (playerTwoInput.equalsIgnoreCase("Scissors")) {
-                    //PLAYER 1 ROCK PLAYER 2 SCISSORS
-                    System.out.println("Player 1 wins!");
-                }
+                //PLAYER 1 ROCK PLAYER 2 PAPER
+                }else if(playerTwoInput.equalsIgnoreCase("Paper")) {System.out.println("Player 2 wins!");
 
-                //PLAYER 1 PAPER
+                //PLAYER 1 ROCK PLAYER 2 SCISSORS
+                }else if(playerTwoInput.equalsIgnoreCase("Scissors")) {System.out.println("Player 1 wins!");}
+
+
+                //PLAYER 1 PAPER---
             } else if (playerOneInput.equalsIgnoreCase("Paper")) {
 
-                if (playerTwoInput.equalsIgnoreCase("Rock")) {
-                    //PLAYER 1 PAPER PLAYER 2 ROCK
-                    System.out.println("Player 1 wins!");
-                } else if (playerTwoInput.equalsIgnoreCase("Paper")) {
-                    //PLAYER 1 PAPER PLAYER 2 PAPER
-                    System.out.println("Tie!");
-                } else if (playerTwoInput.equalsIgnoreCase("Scissors")) {
-                    //PLAYER 1 PAPER PLAYER 2 SCISSORS
-                    System.out.println("Player 2 wins!");
-                }
+                //PLAYER 1 PAPER PLAYER 2 ROCK
+                if (playerTwoInput.equalsIgnoreCase("Rock")) {System.out.println("Player 1 wins!");
 
-                //PLAYER 1 SCISSORS
+                //PLAYER 1 PAPER PLAYER 2 PAPER
+                }else if(playerTwoInput.equalsIgnoreCase("Paper")) {System.out.println("Tie!");
+
+                //PLAYER 1 PAPER PLAYER 2 SCISSORS
+                }else if(playerTwoInput.equalsIgnoreCase("Scissors")) {System.out.println("Player 2 wins!");}
+
+
+                //PLAYER 1 SCISSORS---
             } else if (playerOneInput.equalsIgnoreCase("Scissors")) {
 
-                if (playerTwoInput.equalsIgnoreCase("Rock")) {
-                    //PLAYER 1 SCISSORS PLAYER 2 ROCK
-                    System.out.println("Player 2 wins!");
-                } else if (playerTwoInput.equalsIgnoreCase("Paper")) {
-                    //PLAYER 1 SCISSORS PLAYER 2 PAPER
-                    System.out.println("Player 1 wins!");
-                } else if (playerTwoInput.equalsIgnoreCase("Scissors")) {
-                    //PLAYER 1 SCISSORS PLAYER 2 SCISSORS
-                    System.out.println("Tie!");
-                }
+                //PLAYER 1 SCISSORS PLAYER 2 ROCK
+                if (playerTwoInput.equalsIgnoreCase("Rock")) {System.out.println("Player 2 wins!");
+
+                //PLAYER 1 SCISSORS PLAYER 2 PAPER
+                }else if(playerTwoInput.equalsIgnoreCase("Paper")) {System.out.println("Player 1 wins!");
+
+                //PLAYER 1 SCISSORS PLAYER 2 SCISSORS
+                }else if(playerTwoInput.equalsIgnoreCase("Scissors")) {System.out.println("Tie!");}
             }
 
             System.out.println("Play again? [Y/N]");
@@ -77,7 +72,7 @@ public class rockPaperScissors {
         do{
             for(String i:OPTIONS){
                 if(input.equalsIgnoreCase(i)){ //runs through all 3 options and sees if input is equal to them
-                    //unfortunately when casting an array to an arraylist so you
+                    //unfortunately when casting an array to an arraylist so you |EDIT: what was i trying to say here lmao this comment was literally left unfinished
                     valid = true;
                 }else{
                     if (input.equalsIgnoreCase(String.valueOf(i.charAt(0)))){
